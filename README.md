@@ -19,3 +19,5 @@ Currently all survey results will be stored in ```./Background Survey```, which 
 
 # Useful link
 ...
+Slay the Spire link:
+https://spire-codex.com/
