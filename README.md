@@ -1,9 +1,7 @@
-# FYP: Tabletop Game-Playing AI Agents
+# FYP: Video Game-Playing AI Agents
 HKUST COMP final year project 
 
-Game: Hanabi(tentative)
-
-The current topic is tentative, it may be subject to change upon further background survey
+Game: Slay the Spire 2
 
 # Workflow
 ## 1. Background survey
@@ -12,12 +10,12 @@ a. Tabletop games/ Board games
 b. Video games
 c. Social analysis with wardrobe society built with RL
 
-Currently all survey results will be stored in ```./Background Survey```, which may be changed with project's progression. (please come up with a common naming or structure convention I'm bad at this lol)
+
 
 # Schedule
 ...
 
 # Useful link
 ...
-Slay the Spire link:
+Slay the Spire 2 link:
 https://spire-codex.com/
