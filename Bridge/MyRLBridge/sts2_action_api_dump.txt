@@ -1,0 +1,438 @@
+========== ACTION API DIAGNOSTIC ==========
+Captured: 2026-11-12T16:57:55.8504928+08:00
+
+================================
+TYPE: MegaCrit.Sts2.Core.Models.CardModel
+================================
+--- PUBLIC PROPERTIES ---
+MegaCrit.Sts2.Core.Localization.LocString TitleLocString
+System.String Title
+MegaCrit.Sts2.Core.Localization.LocString Description
+System.String PortraitPath
+System.String BetaPortraitPath
+static System.String MissingPortraitPath
+System.Boolean HasPortrait
+System.Boolean HasBetaPortrait
+Godot.Texture2D Portrait
+Godot.Texture2D Frame
+Godot.Texture2D AncientTextBg
+Godot.Texture2D AncientBorder
+Godot.Texture2D PortraitBorder
+Godot.Texture2D EnergyIcon
+Godot.Texture2D BannerTexture
+Godot.Material BannerMaterial
+Godot.Material FrameMaterial
+MegaCrit.Sts2.Core.Entities.Cards.CardType Type
+MegaCrit.Sts2.Core.Entities.Cards.CardRarity Rarity
+MegaCrit.Sts2.Core.Entities.Cards.CardMultiplayerConstraint MultiplayerConstraint
+MegaCrit.Sts2.Core.Models.CardPoolModel Pool
+MegaCrit.Sts2.Core.Models.CardPoolModel VisualCardPool
+MegaCrit.Sts2.Core.Entities.Players.Player Owner
+MegaCrit.Sts2.Core.Entities.Cards.CardPile Pile
+MegaCrit.Sts2.Core.Entities.Cards.CardEnergyCost EnergyCost
+System.Int32 BaseReplayCount
+System.Int32 CanonicalStarCost
+System.Int32 BaseStarCost
+System.Boolean WasStarCostJustUpgraded
+MegaCrit.Sts2.Core.Entities.Cards.TemporaryCardCost TemporaryStarCost
+System.Int32 CurrentStarCost
+System.Boolean HasStarCostX
+System.Int32 LastStarsSpent
+MegaCrit.Sts2.Core.Entities.Cards.TargetType TargetType
+System.Collections.Generic.IEnumerable`1[[MegaCrit.Sts2.Core.Entities.Cards.CardKeyword, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] CanonicalKeywords
+System.Collections.Generic.IReadOnlySet`1[[MegaCrit.Sts2.Core.Entities.Cards.CardKeyword, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] Keywords
+System.Collections.Generic.IEnumerable`1[[MegaCrit.Sts2.Core.Entities.Cards.CardTag, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] Tags
+MegaCrit.Sts2.Core.Localization.DynamicVars.DynamicVarSet DynamicVars
+System.Boolean ExhaustOnNextPlay
+System.Boolean ShouldRetainThisTurn
+System.Boolean IsSlyThisTurn
+MegaCrit.Sts2.Core.Models.EnchantmentModel Enchantment
+MegaCrit.Sts2.Core.Models.AfflictionModel Affliction
+System.Boolean CanBeGeneratedInCombat
+System.Boolean CanBeGeneratedByModifiers
+MegaCrit.Sts2.Core.Entities.Cards.OrbEvokeType OrbEvokeType
+System.Boolean GainsBlock
+System.Boolean IsBasicStrikeOrDefend
+MegaCrit.Sts2.Core.Models.CardModel CloneOf
+System.Boolean IsClone
+MegaCrit.Sts2.Core.Models.CardModel DupeOf
+System.Boolean IsDupe
+System.Boolean IsRemovable
+System.Boolean IsTransformable
+System.Boolean IsInCombat
+System.Int32 CurrentUpgradeLevel
+System.Int32 MaxUpgradeLevel
+System.Boolean IsUpgraded
+System.Boolean IsUpgradable
+MegaCrit.Sts2.Core.Entities.Cards.CardUpgradePreviewType UpgradePreviewType
+System.Boolean ShouldShowInCardLibrary
+System.Boolean ShouldGlowGold
+System.Boolean ShouldGlowRed
+System.Boolean IsEnchantmentPreview
+System.Boolean HasBuiltInOverlay
+System.String OverlayPath
+System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] FloorAddedToDeck
+MegaCrit.Sts2.Core.Entities.Creatures.Creature CurrentTarget
+System.Int32 CurrentPlayIndex
+MegaCrit.Sts2.Core.Models.CardModel DeckVersion
+System.Boolean HasBeenRemovedFromState
+System.Collections.Generic.IEnumerable`1[[MegaCrit.Sts2.Core.HoverTips.IHoverTip, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] HoverTips
+MegaCrit.Sts2.Core.Models.CardModel CanonicalInstance
+MegaCrit.Sts2.Core.Runs.IRunState RunState
+MegaCrit.Sts2.Core.Combat.ICombatState CombatState
+MegaCrit.Sts2.Core.Runs.ICardScope CardScope
+System.Boolean HasTurnEndInHandEffect
+System.Boolean ShouldReceiveCombatHooks
+System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] AllPortraitPaths
+System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] RunAssetPaths
+MegaCrit.Sts2.Core.Models.ModelId Id
+System.Boolean IsMutable
+System.Boolean IsCanonical
+System.Int32 CategorySortingId
+System.Int32 EntrySortingId
+System.Boolean PreviewOutsideOfCombat
+--- PUBLIC FIELDS ---
+--- CONSTRUCTORS ---
+--- PUBLIC METHODS ---
+System.Void InvokeEnergyCostChanged()
+System.Int32 ResolveEnergyXValue()
+System.Int32 GetEnchantedReplayCount()
+System.Int32 ResolveStarXValue()
+System.Collections.Generic.IReadOnlySet`1[[MegaCrit.Sts2.Core.Entities.Cards.CardKeyword, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] GetKeywordsWithSources(MegaCrit.Sts2.Core.Entities.Cards.KeywordSources sources)
+Godot.Control CreateOverlay()
+MegaCrit.Sts2.Core.Models.CardModel ToMutable()
+System.Void AfterCreated()
+System.Void SetToFreeThisTurn()
+System.Void SetToFreeThisCombat()
+System.Void SetStarCostUntilPlayed(System.Int32 cost)
+System.Void SetStarCostThisTurn(System.Int32 cost)
+System.Void SetStarCostThisCombat(System.Int32 cost)
+System.Int32 GetStarCostThisCombat()
+System.Void AddKeyword(MegaCrit.Sts2.Core.Entities.Cards.CardKeyword keyword)
+System.Void RemoveKeyword(MegaCrit.Sts2.Core.Entities.Cards.CardKeyword keyword)
+System.Void GiveSingleTurnRetain()
+System.Void GiveSingleTurnSly()
+System.String GetDescriptionForPile(MegaCrit.Sts2.Core.Entities.Cards.PileType pileType, MegaCrit.Sts2.Core.Entities.Creatures.Creature target [optional])
+System.String GetDescriptionForUpgradePreview()
+System.Void UpdateDynamicVarPreview(MegaCrit.Sts2.Core.Entities.Cards.CardPreviewMode previewMode, MegaCrit.Sts2.Core.Entities.Creatures.Creature target, MegaCrit.Sts2.Core.Localization.DynamicVars.DynamicVarSet dynamicVarSet)
+System.Void EnchantInternal(MegaCrit.Sts2.Core.Models.EnchantmentModel enchantment, System.Decimal amount)
+System.Void AfflictInternal(MegaCrit.Sts2.Core.Models.AfflictionModel affliction, System.Decimal amount)
+System.Void ClearEnchantmentInternal()
+System.Void ClearAfflictionInternal()
+System.Int32 GetStarCostWithModifiers()
+System.Boolean CostsEnergyOrStars(System.Boolean includeGlobalModifiers)
+System.Void RemoveFromCurrentPile(System.Boolean silent [optional])
+System.Void RemoveFromState()
+System.Void EndOfTurnCleanup()
+System.Void AfterTransformedFrom()
+System.Void AfterTransformedTo()
+System.Void AfterForged()
+System.Threading.Tasks.Task OnEnqueuePlayVfx(MegaCrit.Sts2.Core.Entities.Creatures.Creature target)
+System.Threading.Tasks.Task OnTurnEndInHandWrapper(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext)
+System.Boolean CanPlayTargeting(MegaCrit.Sts2.Core.Entities.Creatures.Creature target)
+System.Boolean CanPlay()
+System.Boolean CanPlay(MegaCrit.Sts2.Core.Entities.Cards.UnplayableReason& reason, MegaCrit.Sts2.Core.Models.AbstractModel& preventer)
+System.Boolean IsValidTarget(MegaCrit.Sts2.Core.Entities.Creatures.Creature target)
+System.Boolean TryManualPlay(MegaCrit.Sts2.Core.Entities.Creatures.Creature target)
+System.Threading.Tasks.Task`1[[System.ValueTuple`2[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] SpendResources()
+System.Threading.Tasks.Task OnPlayWrapper(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, MegaCrit.Sts2.Core.Entities.Creatures.Creature target, System.Boolean isAutoPlay, MegaCrit.Sts2.Core.Entities.Cards.ResourceInfo resources, System.Boolean skipCardPileVisuals [optional])
+System.Threading.Tasks.Task MoveToResultPileWithoutPlaying(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext)
+System.Void UpgradeInternal()
+System.Void FinalizeUpgradeInternal()
+System.Void DowngradeInternal()
+System.Void InvokeDrawn()
+MegaCrit.Sts2.Core.Models.CardModel CreateClone()
+MegaCrit.Sts2.Core.Models.CardModel CreateDupe()
+MegaCrit.Sts2.Core.Saves.Runs.SerializableCard ToSerializable()
+static MegaCrit.Sts2.Core.Models.CardModel FromSerializable(MegaCrit.Sts2.Core.Saves.Runs.SerializableCard save)
+System.Int32 CompareTo(MegaCrit.Sts2.Core.Models.AbstractModel other)
+
+================================
+TYPE: MegaCrit.Sts2.Core.Models.PotionModel
+================================
+--- PUBLIC PROPERTIES ---
+MegaCrit.Sts2.Core.Localization.LocString Title
+MegaCrit.Sts2.Core.Localization.LocString SelectionScreenPrompt
+MegaCrit.Sts2.Core.Localization.LocString DynamicDescription
+System.String ImagePath
+Godot.Texture2D Image
+System.String OutlinePath
+Godot.Texture2D Outline
+MegaCrit.Sts2.Core.Entities.Potions.PotionRarity Rarity
+MegaCrit.Sts2.Core.Entities.Potions.PotionUsage Usage
+MegaCrit.Sts2.Core.Entities.Cards.TargetType TargetType
+MegaCrit.Sts2.Core.Models.PotionPoolModel Pool
+MegaCrit.Sts2.Core.Entities.Players.Player Owner
+MegaCrit.Sts2.Core.Localization.DynamicVars.DynamicVarSet DynamicVars
+System.Boolean IsQueued
+System.Boolean CanBeGeneratedInCombat
+System.Boolean PassesCustomUsabilityCheck
+MegaCrit.Sts2.Core.HoverTips.HoverTip HoverTip
+System.Collections.Generic.IEnumerable`1[[MegaCrit.Sts2.Core.HoverTips.IHoverTip, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] HoverTips
+System.Collections.Generic.IEnumerable`1[[MegaCrit.Sts2.Core.HoverTips.IHoverTip, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] ExtraHoverTips
+MegaCrit.Sts2.Core.Models.PotionModel CanonicalInstance
+System.Boolean ShouldReceiveCombatHooks
+System.Boolean HasBeenRemovedFromState
+MegaCrit.Sts2.Core.Models.ModelId Id
+System.Boolean IsMutable
+System.Boolean IsCanonical
+System.Int32 CategorySortingId
+System.Int32 EntrySortingId
+System.Boolean PreviewOutsideOfCombat
+--- PUBLIC FIELDS ---
+static System.String locTable
+--- CONSTRUCTORS ---
+--- PUBLIC METHODS ---
+MegaCrit.Sts2.Core.Models.PotionModel ToMutable()
+System.Void Discard()
+System.Void RemoveBeforeUse()
+System.Void EnqueueManualUse(MegaCrit.Sts2.Core.Entities.Creatures.Creature target)
+System.Boolean IsValidTarget(MegaCrit.Sts2.Core.Entities.Creatures.Creature target)
+System.Threading.Tasks.Task OnUseWrapper(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, MegaCrit.Sts2.Core.Entities.Creatures.Creature target)
+System.Void AfterUsageCanceled()
+MegaCrit.Sts2.Core.Saves.Runs.SerializablePotion ToSerializable(System.Int32 slotIndex)
+static MegaCrit.Sts2.Core.Models.PotionModel FromSerializable(MegaCrit.Sts2.Core.Saves.Runs.SerializablePotion save)
+System.Boolean CanThrowAtAlly()
+
+================================
+TYPE: MegaCrit.Sts2.Core.GameActions.DiscardPotionGameAction
+================================
+--- PUBLIC PROPERTIES ---
+System.UInt64 OwnerId
+MegaCrit.Sts2.Core.Entities.Multiplayer.GameActionType ActionType
+System.Boolean WasEnqueuedInCombat
+MegaCrit.Sts2.Core.Entities.Actions.GameActionState State
+System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] Id
+System.Threading.Tasks.Task CompletionTask
+System.Exception Exception
+System.Boolean RecordableToReplay
+--- PUBLIC FIELDS ---
+--- CONSTRUCTORS ---
+DiscardPotionGameAction(MegaCrit.Sts2.Core.Entities.Players.Player player, System.UInt32 potionSlotIndex, System.Boolean isCombatInProgress)
+--- PUBLIC METHODS ---
+MegaCrit.Sts2.Core.GameActions.Multiplayer.INetAction ToNetAction()
+System.String ToString()
+System.Void OnEnqueued(System.Action`1[[MegaCrit.Sts2.Core.GameActions.GameAction, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] afterFinished, System.UInt32 id)
+System.Threading.Tasks.Task Execute()
+System.Void ResumeAfterGatheringPlayerChoice(System.UInt32 newId)
+System.Threading.Tasks.Task WaitForActionToResumeExecutingAfterPlayerChoice()
+System.Void PauseForPlayerChoice()
+System.Void Cancel()
+
+================================
+TYPE: MegaCrit.Sts2.Core.GameActions.EndPlayerTurnAction
+================================
+--- PUBLIC PROPERTIES ---
+System.UInt64 OwnerId
+MegaCrit.Sts2.Core.Entities.Multiplayer.GameActionType ActionType
+MegaCrit.Sts2.Core.Entities.Actions.GameActionState State
+System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] Id
+System.Threading.Tasks.Task CompletionTask
+System.Exception Exception
+System.Boolean RecordableToReplay
+--- PUBLIC FIELDS ---
+--- CONSTRUCTORS ---
+EndPlayerTurnAction(MegaCrit.Sts2.Core.Entities.Players.Player player, System.Int32 turnNumber)
+--- PUBLIC METHODS ---
+MegaCrit.Sts2.Core.GameActions.Multiplayer.INetAction ToNetAction()
+System.String ToString()
+System.Void OnEnqueued(System.Action`1[[MegaCrit.Sts2.Core.GameActions.GameAction, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] afterFinished, System.UInt32 id)
+System.Threading.Tasks.Task Execute()
+System.Void ResumeAfterGatheringPlayerChoice(System.UInt32 newId)
+System.Threading.Tasks.Task WaitForActionToResumeExecutingAfterPlayerChoice()
+System.Void PauseForPlayerChoice()
+System.Void Cancel()
+
+================================
+TYPE: MegaCrit.Sts2.Core.GameActions.Multiplayer.ActionQueueSynchronizer
+================================
+--- PUBLIC PROPERTIES ---
+System.UInt32 NextHookId
+MegaCrit.Sts2.Core.Entities.Multiplayer.ActionSynchronizerCombatState CombatState
+--- PUBLIC FIELDS ---
+--- CONSTRUCTORS ---
+ActionQueueSynchronizer(MegaCrit.Sts2.Core.Runs.IPlayerCollection players, MegaCrit.Sts2.Core.GameActions.Multiplayer.ActionQueueSet actionQueueSet, MegaCrit.Sts2.Core.Multiplayer.Game.RunLocationTargetedMessageBuffer messageBuffer, MegaCrit.Sts2.Core.Multiplayer.Game.INetGameService netService)
+--- PUBLIC METHODS ---
+System.Void Dispose()
+System.Void SetCombatState(MegaCrit.Sts2.Core.Entities.Multiplayer.ActionSynchronizerCombatState combatState)
+System.Void RequestEnqueue(MegaCrit.Sts2.Core.GameActions.GameAction action)
+MegaCrit.Sts2.Core.GameActions.GenericHookGameAction GenerateHookAction(System.UInt64 ownerId, MegaCrit.Sts2.Core.Entities.Multiplayer.GameActionType gameActionType)
+System.Void RequestEnqueueHookAction(MegaCrit.Sts2.Core.GameActions.GenericHookGameAction action)
+System.Void RequestResumeActionAfterPlayerChoice(MegaCrit.Sts2.Core.GameActions.GameAction action)
+MegaCrit.Sts2.Core.GameActions.GenericHookGameAction GetHookActionForId(System.UInt32 id, System.UInt64 ownerId, MegaCrit.Sts2.Core.Entities.Multiplayer.GameActionType gameActionType)
+System.Void FastForwardHookId(System.UInt32 hookId)
+
+================================
+TYPE: MegaCrit.Sts2.Core.GameActions.NetDiscardPotionGameAction
+================================
+--- PUBLIC PROPERTIES ---
+--- PUBLIC FIELDS ---
+System.UInt32 potionSlotIndex
+System.Boolean wasEnqueuedInCombat
+--- CONSTRUCTORS ---
+--- PUBLIC METHODS ---
+MegaCrit.Sts2.Core.GameActions.GameAction ToGameAction(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Void Serialize(MegaCrit.Sts2.Core.Multiplayer.Serialization.PacketWriter writer)
+System.Void Deserialize(MegaCrit.Sts2.Core.Multiplayer.Serialization.PacketReader reader)
+System.String ToString()
+System.Boolean Equals(System.Object obj)
+System.Int32 GetHashCode()
+
+================================
+TYPE: MegaCrit.Sts2.Core.GameActions.NetUsePotionAction
+================================
+--- PUBLIC PROPERTIES ---
+--- PUBLIC FIELDS ---
+System.UInt32 potionIndex
+System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] targetId
+System.Nullable`1[[System.UInt64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] targetPlayerId
+System.Boolean enqueuedInCombat
+--- CONSTRUCTORS ---
+--- PUBLIC METHODS ---
+MegaCrit.Sts2.Core.GameActions.GameAction ToGameAction(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Void Serialize(MegaCrit.Sts2.Core.Multiplayer.Serialization.PacketWriter writer)
+System.Void Deserialize(MegaCrit.Sts2.Core.Multiplayer.Serialization.PacketReader reader)
+System.String ToString()
+System.Boolean Equals(System.Object obj)
+System.Int32 GetHashCode()
+
+================================
+TYPE: MegaCrit.Sts2.Core.GameActions.PlayCardAction
+================================
+--- PUBLIC PROPERTIES ---
+System.UInt64 OwnerId
+MegaCrit.Sts2.Core.Entities.Multiplayer.GameActionType ActionType
+MegaCrit.Sts2.Core.Entities.Players.Player Player
+MegaCrit.Sts2.Core.Entities.Multiplayer.NetCombatCard NetCombatCard
+MegaCrit.Sts2.Core.Models.ModelId CardModelId
+System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] TargetId
+MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext PlayerChoiceContext
+MegaCrit.Sts2.Core.Entities.Creatures.Creature Target
+MegaCrit.Sts2.Core.Entities.Actions.GameActionState State
+System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] Id
+System.Threading.Tasks.Task CompletionTask
+System.Exception Exception
+System.Boolean RecordableToReplay
+--- PUBLIC FIELDS ---
+--- CONSTRUCTORS ---
+PlayCardAction(MegaCrit.Sts2.Core.Models.CardModel cardModel, MegaCrit.Sts2.Core.Entities.Creatures.Creature target)
+PlayCardAction(MegaCrit.Sts2.Core.Entities.Players.Player player, MegaCrit.Sts2.Core.Entities.Multiplayer.NetCombatCard netCombatCard, MegaCrit.Sts2.Core.Models.ModelId cardModelId, System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] targetId)
+--- PUBLIC METHODS ---
+MegaCrit.Sts2.Core.GameActions.Multiplayer.INetAction ToNetAction()
+System.String ToString()
+System.Void OnEnqueued(System.Action`1[[MegaCrit.Sts2.Core.GameActions.GameAction, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] afterFinished, System.UInt32 id)
+System.Threading.Tasks.Task Execute()
+System.Void ResumeAfterGatheringPlayerChoice(System.UInt32 newId)
+System.Threading.Tasks.Task WaitForActionToResumeExecutingAfterPlayerChoice()
+System.Void PauseForPlayerChoice()
+System.Void Cancel()
+
+================================
+TYPE: MegaCrit.Sts2.Core.GameActions.UsePotionAction
+================================
+--- PUBLIC PROPERTIES ---
+System.UInt64 OwnerId
+MegaCrit.Sts2.Core.Entities.Multiplayer.GameActionType ActionType
+MegaCrit.Sts2.Core.Entities.Players.Player Player
+System.UInt32 PotionIndex
+System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] TargetId
+System.Boolean WasEnqueuedInCombat
+MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext PlayerChoiceContext
+MegaCrit.Sts2.Core.Entities.Actions.GameActionState State
+System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] Id
+System.Threading.Tasks.Task CompletionTask
+System.Exception Exception
+System.Boolean RecordableToReplay
+--- PUBLIC FIELDS ---
+--- CONSTRUCTORS ---
+UsePotionAction(MegaCrit.Sts2.Core.Models.PotionModel potion, MegaCrit.Sts2.Core.Entities.Creatures.Creature target, System.Boolean isCombatInProgress)
+UsePotionAction(MegaCrit.Sts2.Core.Entities.Players.Player player, System.UInt32 potionIndex, System.Nullable`1[[System.UInt32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] targetId, System.Nullable`1[[System.UInt64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] targetPlayerId, System.Boolean isCombatInProgress)
+--- PUBLIC METHODS ---
+MegaCrit.Sts2.Core.GameActions.Multiplayer.INetAction ToNetAction()
+System.String ToString()
+System.Void OnEnqueued(System.Action`1[[MegaCrit.Sts2.Core.GameActions.GameAction, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] afterFinished, System.UInt32 id)
+System.Threading.Tasks.Task Execute()
+System.Void ResumeAfterGatheringPlayerChoice(System.UInt32 newId)
+System.Threading.Tasks.Task WaitForActionToResumeExecutingAfterPlayerChoice()
+System.Void PauseForPlayerChoice()
+System.Void Cancel()
+
+================================
+TYPE: MegaCrit.Sts2.Core.Runs.RunManager
+================================
+--- PUBLIC PROPERTIES ---
+static MegaCrit.Sts2.Core.Runs.RunManager Instance
+MegaCrit.Sts2.Core.Entities.Ascension.AscensionManager AscensionManager
+System.Boolean ShouldSave
+System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] DailyTime
+System.Boolean IsInProgress
+System.Boolean IsCleaningUp
+System.Boolean ForceDiscoveryOrderModifications
+System.Boolean IsGameOver
+System.Boolean IsAbandoned
+MegaCrit.Sts2.Core.Runs.RunHistory History
+MegaCrit.Sts2.Core.Multiplayer.Game.INetGameService NetService
+MegaCrit.Sts2.Core.Multiplayer.Game.ChecksumTracker ChecksumTracker
+MegaCrit.Sts2.Core.Multiplayer.Game.RunLocationTargetedMessageBuffer RunLocationTargetedBuffer
+MegaCrit.Sts2.Core.Multiplayer.Replay.CombatReplayWriter CombatReplayWriter
+MegaCrit.Sts2.Core.Multiplayer.Game.Lobby.RunLobby RunLobby
+MegaCrit.Sts2.Core.Multiplayer.CombatStateSynchronizer CombatStateSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.MapSelectionSynchronizer MapSelectionSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.ActChangeSynchronizer ActChangeSynchronizer
+MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceSynchronizer PlayerChoiceSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.EventSynchronizer EventSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.RewardSynchronizer RewardSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.RewardsSetSynchronizer RewardsSetSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.RestSiteSynchronizer RestSiteSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.OneOffSynchronizer OneOffSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.TreasureRoomRelicSynchronizer TreasureRoomRelicSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.FlavorSynchronizer FlavorSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.PeerInput.PeerInputSynchronizer InputSynchronizer
+MegaCrit.Sts2.Core.Multiplayer.Game.PeerInput.HoveredModelTracker HoveredModelTracker
+MegaCrit.Sts2.Core.GameActions.Multiplayer.ActionQueueSet ActionQueueSet
+MegaCrit.Sts2.Core.GameActions.ActionExecutor ActionExecutor
+MegaCrit.Sts2.Core.GameActions.Multiplayer.ActionQueueSynchronizer ActionQueueSynchronizer
+System.Int64 WinTime
+System.Int64 RunTime
+System.Boolean IsSingleplayerOrFakeMultiplayer
+MegaCrit.Sts2.Core.Saves.MapDrawing.SerializableMapDrawings MapDrawingsToLoad
+System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[MegaCrit.Sts2.Core.Saves.Runs.SerializableActMap, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] SavedMapsToLoad
+--- PUBLIC FIELDS ---
+System.Action debugAfterCombatRewardsOverride
+--- CONSTRUCTORS ---
+--- PUBLIC METHODS ---
+System.Void SetUpNewSingleplayer(MegaCrit.Sts2.Core.Runs.RunState state, System.Boolean shouldSave, System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] dailyTime [optional])
+System.Void SetUpNewMultiplayer(MegaCrit.Sts2.Core.Runs.RunState state, MegaCrit.Sts2.Core.Multiplayer.Game.Lobby.StartRunLobby lobby, System.Boolean shouldSave, System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] dailyTime [optional])
+System.Threading.Tasks.Task SetUpSavedSingleplayer(MegaCrit.Sts2.Core.Runs.RunState state, MegaCrit.Sts2.Core.Saves.SerializableRun save)
+System.Threading.Tasks.Task SetUpSavedMultiplayer(MegaCrit.Sts2.Core.Runs.RunState state, MegaCrit.Sts2.Core.Multiplayer.Game.Lobby.LoadRunLobby lobby)
+System.Void SetUpReplay(MegaCrit.Sts2.Core.Runs.RunState state, MegaCrit.Sts2.Core.Multiplayer.Replay.CombatReplay replay)
+System.Void SetUpTest(MegaCrit.Sts2.Core.Runs.RunState state, MegaCrit.Sts2.Core.Multiplayer.Game.INetGameService gameService, System.Boolean disableCombatStateSync [optional], System.Boolean shouldSave [optional])
+static MegaCrit.Sts2.Core.Saves.SerializableRun CanonicalizeSave(MegaCrit.Sts2.Core.Saves.SerializableRun save, System.UInt64 localPlayerId)
+static System.Collections.Generic.HashSet`1[[MegaCrit.Sts2.Core.Rooms.RoomType, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] BuildRoomTypeBlacklist(MegaCrit.Sts2.Core.Runs.History.MapPointHistoryEntry previousMapPointEntry, System.Collections.Generic.IReadOnlyCollection`1[[MegaCrit.Sts2.Core.Map.MapPoint, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] nextMapPoints)
+MegaCrit.Sts2.Core.Saves.SerializableRun ToSave(MegaCrit.Sts2.Core.Rooms.AbstractRoom preFinishedRoom)
+MegaCrit.Sts2.Core.Runs.RunState Launch()
+System.Threading.Tasks.Task FinalizeStartingRelics()
+System.Void GenerateRooms()
+System.Boolean ShouldApplyTutorialModifications()
+System.Threading.Tasks.Task GenerateMap()
+System.Threading.Tasks.Task EnterMapCoord(MegaCrit.Sts2.Core.Map.MapCoord coord)
+System.Threading.Tasks.Task LoadIntoLatestMapCoord(MegaCrit.Sts2.Core.Rooms.AbstractRoom preFinishedRoom)
+System.Threading.Tasks.Task EnterMapPointInternal(System.Int32 actFloor, MegaCrit.Sts2.Core.Map.MapPointType pointType, MegaCrit.Sts2.Core.Rooms.AbstractRoom preFinishedRoom, System.Boolean saveGame)
+System.Threading.Tasks.Task EnterMapCoordDebug(MegaCrit.Sts2.Core.Map.MapCoord coord, MegaCrit.Sts2.Core.Rooms.RoomType roomType, MegaCrit.Sts2.Core.Map.MapPointType pointType [optional], MegaCrit.Sts2.Core.Models.AbstractModel model [optional], System.Boolean showTransition [optional])
+System.Threading.Tasks.Task`1[[MegaCrit.Sts2.Core.Rooms.AbstractRoom, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] EnterRoomDebug(MegaCrit.Sts2.Core.Rooms.RoomType roomType, MegaCrit.Sts2.Core.Map.MapPointType pointType [optional], MegaCrit.Sts2.Core.Models.AbstractModel model [optional], System.Boolean showTransition [optional])
+System.Threading.Tasks.Task EnterRoom(MegaCrit.Sts2.Core.Rooms.AbstractRoom room)
+System.Threading.Tasks.Task EnterRoomWithoutExitingCurrentRoom(MegaCrit.Sts2.Core.Rooms.AbstractRoom room, System.Boolean fadeToBlack)
+System.Threading.Tasks.Task EnterNextAct()
+System.Threading.Tasks.Task EnterAct(System.Int32 currentActIndex, System.Boolean doTransition [optional])
+System.Threading.Tasks.Task SetActInternal(System.Int32 actIndex)
+System.Threading.Tasks.Task ProceedFromTerminalRewardsScreen()
+System.Void Abandon()
+System.Void WriteReplay(System.Boolean stopRecording)
+System.Void CleanUp(System.Boolean graceful [optional])
+MegaCrit.Sts2.Core.Saves.SerializableRun OnEnded(System.Boolean isVictory)
+System.Boolean HasAscension(MegaCrit.Sts2.Core.Entities.Ascension.AscensionLevel level)
+System.Void ApplyAscensionEffects(MegaCrit.Sts2.Core.Entities.Players.Player player)
+MegaCrit.Sts2.Core.Multiplayer.Messages.Lobby.ClientRejoinResponseMessage GetRejoinMessage()
+System.Void LocalPlayerDisconnected(MegaCrit.Sts2.Core.Entities.Multiplayer.NetErrorInfo info)
+System.String GetLocalCharacterEnergyIconPrefix()
+MegaCrit.Sts2.Core.Runs.RunState DebugOnlyGetState()

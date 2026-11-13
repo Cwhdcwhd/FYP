@@ -1,0 +1,22 @@
+========== CARD PILE DIAGNOSTIC ==========
+Captured: 2026-11-12T14:30:28.1863462+08:00
+Hand runtime type: MegaCrit.Sts2.Core.Entities.Cards.CardPile
+Hand card count: 0
+
+--- PUBLIC PROPERTIES ---
+MegaCrit.Sts2.Core.Entities.Cards.PileType Type = Hand
+System.Collections.Generic.IReadOnlyList`1[[MegaCrit.Sts2.Core.Models.CardModel, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] Cards = System.Collections.Generic.List`1[MegaCrit.Sts2.Core.Models.CardModel]
+System.Boolean IsEmpty = True
+System.Boolean IsCombatPile = True
+System.Int32 UpgradableCardCount = 0
+
+--- PUBLIC METHODS ---
+Void RandomizeOrderInternal(Player player, Rng rng, CombatState state)
+Void AddInternal(CardModel card, Int32 index, Boolean silent)
+Void RemoveInternal(CardModel card, Boolean silent)
+Void MoveToBottomInternal(CardModel card)
+Void MoveToTopInternal(CardModel card)
+Void Clear(Boolean silent)
+Void InvokeCardAddFinished()
+Void InvokeCardRemoveFinished()
+Void InvokeContentsChanged()

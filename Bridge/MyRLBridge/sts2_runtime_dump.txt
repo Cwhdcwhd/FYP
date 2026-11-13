@@ -1,0 +1,378 @@
+MYRLBRIDGE DIAGNOSTIC V3
+Captured: 2026-11-10T21:22:36.7013611+08:00
+
+========== COMBAT MANAGER ==========
+--- combatManager: MegaCrit.Sts2.Core.Combat.CombatManager ---
+--- PROPERTIES ---
+MegaCrit.Sts2.Core.Models.CardModel DebugForcedTopCardOnNextShuffle = null
+System.Boolean IsPaused = False
+System.Boolean PlayerActionsDisabled = False
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Players.Player> PlayersTakingExtraTurn:
+  <empty>
+System.Boolean IsEnemyTurnStarted = False
+System.Boolean EndingPlayerTurnPhaseTwo = False
+System.Boolean EndingPlayerTurnPhaseOne = False
+MegaCrit.Sts2.Core.Combat.CombatStateTracker StateTracker -> MegaCrit.Sts2.Core.Combat.CombatStateTracker
+MegaCrit.Sts2.Core.Combat.History.CombatHistory History -> MegaCrit.Sts2.Core.Combat.History.CombatHistory
+System.Boolean IsInProgress = True
+System.Boolean IsStarting = False
+System.Boolean IsAboutToLose = False
+System.Boolean IsEnding = False
+System.Boolean IsOverOrEnding = False
+--- PUBLIC INSTANCE METHODS ---
+MegaCrit.Sts2.Core.Combat.CombatState DebugOnlyGetState()
+System.Boolean IsExecutingCardOrPotionEffect(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Void BeginCardOrPotionEffect(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Void EndCardOrPotionEffect(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Void SetUpCombat(MegaCrit.Sts2.Core.Combat.CombatState state)
+System.Void AfterCombatRoomLoaded()
+System.Threading.Tasks.Task StartCombatInternal()
+System.Void SetReadyToEndTurn(MegaCrit.Sts2.Core.Entities.Players.Player player, System.Boolean canBackOut, System.Func<System.Threading.Tasks.Task> actionDuringEnemyTurn)
+System.Void UndoReadyToEndTurn(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Void OnEndedTurnLocally()
+System.Void SetReadyToBeginEnemyTurn(MegaCrit.Sts2.Core.Entities.Players.Player player, System.Func<System.Threading.Tasks.Task> actionDuringEnemyTurn)
+System.Boolean IsPlayerReadyToEndTurn(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Boolean AllPlayersReadyToEndTurn()
+System.Void AddCreature(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature)
+System.Threading.Tasks.Task AfterCreatureAdded(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature)
+System.Threading.Tasks.Task CheckForEmptyHand(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Void Reset(System.Boolean graceful)
+System.Threading.Tasks.Task HandlePlayerDeath(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Void LoseCombat()
+System.Threading.Tasks.Task EndCombatInternal()
+System.Void RemoveCreature(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature)
+System.Threading.Tasks.Task<System.Boolean> CheckWinCondition()
+System.Threading.Tasks.Task EndPlayerTurnPhaseOneInternal()
+System.Threading.Tasks.Task EndPlayerTurnPhaseTwoInternal()
+System.Threading.Tasks.Task SwitchFromPlayerToEnemySide(System.Func<System.Threading.Tasks.Task> actionDuringEnemyTurn)
+System.Void Pause()
+System.Void Unpause()
+System.Boolean IsPartOfPlayerTurn(MegaCrit.Sts2.Core.Entities.Players.Player player)
+System.Threading.Tasks.Task WaitForUnpause()
+System.Void DebugForceTopCardOnNextShuffle(MegaCrit.Sts2.Core.Models.CardModel card)
+System.Void DebugClearForcedTopCardOnNextShuffle()
+
+========== COMBAT STATE ==========
+--- combatState: MegaCrit.Sts2.Core.Combat.CombatState ---
+--- PROPERTIES ---
+MegaCrit.Sts2.Core.Runs.IRunState RunState -> MegaCrit.Sts2.Core.Runs.RunState
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> Allies:
+  [0] MegaCrit.Sts2.Core.Entities.Creatures.Creature
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> Enemies:
+  [0] MegaCrit.Sts2.Core.Entities.Creatures.Creature
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> Creatures:
+  [0] MegaCrit.Sts2.Core.Entities.Creatures.Creature
+  [1] MegaCrit.Sts2.Core.Entities.Creatures.Creature
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> PlayerCreatures:
+  [0] MegaCrit.Sts2.Core.Entities.Creatures.Creature
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Players.Player> Players:
+  [0] MegaCrit.Sts2.Core.Entities.Players.Player
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Models.ModifierModel> Modifiers:
+  <empty>
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Models.BadgeModel> BadgeModels:
+  [0] MegaCrit.Sts2.Core.Models.Badges.CccComboModel
+  [1] MegaCrit.Sts2.Core.Models.Badges.DebufferModel
+MegaCrit.Sts2.Core.Models.Singleton.MultiplayerScalingModel MultiplayerScalingModel -> MegaCrit.Sts2.Core.Models.Singleton.MultiplayerScalingModel
+System.Int32 RoundNumber = 5
+MegaCrit.Sts2.Core.Combat.CombatSide CurrentSide = Player
+MegaCrit.Sts2.Core.Models.EncounterModel Encounter -> MegaCrit.Sts2.Core.Models.Encounters.VineShamblerNormal
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> EscapedCreatures:
+  <empty>
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> CreaturesOnCurrentSide:
+  [0] MegaCrit.Sts2.Core.Entities.Creatures.Creature
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> HittableEnemies:
+  [0] MegaCrit.Sts2.Core.Entities.Creatures.Creature
+--- PUBLIC INSTANCE METHODS ---
+T CreateCard(MegaCrit.Sts2.Core.Entities.Players.Player owner)
+MegaCrit.Sts2.Core.Models.CardModel CreateCard(MegaCrit.Sts2.Core.Models.CardModel canonicalCard, MegaCrit.Sts2.Core.Entities.Players.Player owner)
+MegaCrit.Sts2.Core.Models.CardModel CloneCard(MegaCrit.Sts2.Core.Models.CardModel mutableCard)
+System.Void AddCard(MegaCrit.Sts2.Core.Models.CardModel card, MegaCrit.Sts2.Core.Entities.Players.Player owner)
+System.Void RemoveCard(MegaCrit.Sts2.Core.Models.CardModel card)
+System.Boolean ContainsCard(MegaCrit.Sts2.Core.Models.CardModel card)
+System.Void AddPlayer(MegaCrit.Sts2.Core.Entities.Players.Player player)
+MegaCrit.Sts2.Core.Entities.Creatures.Creature CreateCreature(MegaCrit.Sts2.Core.Models.MonsterModel monster, MegaCrit.Sts2.Core.Combat.CombatSide side, System.String slot)
+System.Void CreatureEscaped(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature)
+System.Void RemoveCreature(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature, System.Boolean unattach)
+System.Boolean ContainsCreature(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature)
+System.Boolean ContainsMonster()
+MegaCrit.Sts2.Core.Entities.Creatures.Creature GetCreature(System.Nullable<System.UInt32> combatId)
+System.Threading.Tasks.Task<MegaCrit.Sts2.Core.Entities.Creatures.Creature> GetCreatureAsync(System.Nullable<System.UInt32> combatId, System.Double timeoutSec)
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> GetCreaturesOnSide(MegaCrit.Sts2.Core.Combat.CombatSide side)
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> GetOpponentsOf(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature)
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> GetTeammatesOf(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature)
+MegaCrit.Sts2.Core.Entities.Players.Player GetPlayer(System.UInt64 playerId)
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.AbstractModel> IterateHookListeners()
+System.Void SortEnemiesBySlotName()
+System.Void SetEnemyIndex(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature, System.Int32 index)
+System.Void AddCreature(MegaCrit.Sts2.Core.Entities.Creatures.Creature creature)
+System.Boolean IsLiveCombat()
+
+========== PLAYER 0 ==========
+--- player[0]: MegaCrit.Sts2.Core.Entities.Players.Player ---
+--- PROPERTIES ---
+System.Int32 MaxPotionCount = 3
+MegaCrit.Sts2.Core.Models.CharacterModel Character -> MegaCrit.Sts2.Core.Models.Characters.Silent
+MegaCrit.Sts2.Core.Entities.Creatures.Creature Creature -> MegaCrit.Sts2.Core.Entities.Creatures.Creature
+System.UInt64 NetId = 1
+MegaCrit.Sts2.Core.Random.PlayerRngSet PlayerRng -> MegaCrit.Sts2.Core.Random.PlayerRngSet
+MegaCrit.Sts2.Core.Odds.PlayerOddsSet PlayerOdds -> MegaCrit.Sts2.Core.Odds.PlayerOddsSet
+MegaCrit.Sts2.Core.Runs.RelicGrabBag RelicGrabBag -> MegaCrit.Sts2.Core.Runs.RelicGrabBag
+MegaCrit.Sts2.Core.Unlocks.UnlockState UnlockState -> MegaCrit.Sts2.Core.Unlocks.UnlockState
+MegaCrit.Sts2.Core.Runs.IRunState RunState -> MegaCrit.Sts2.Core.Runs.RunState
+System.Boolean IsActiveForHooks = True
+MegaCrit.Sts2.Core.Entities.Players.PlayerCombatState PlayerCombatState -> MegaCrit.Sts2.Core.Entities.Players.PlayerCombatState
+MegaCrit.Sts2.Core.Entities.Players.ExtraPlayerFields ExtraFields -> MegaCrit.Sts2.Core.Entities.Players.ExtraPlayerFields
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Models.RelicModel> Relics:
+  [0] MegaCrit.Sts2.Core.Models.Relics.RingOfTheSnake
+  [1] MegaCrit.Sts2.Core.Models.Relics.NewLeaf
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Models.PotionModel> PotionSlots:
+  [0] MegaCrit.Sts2.Core.Models.Potions.SpeedPotion
+  [1] null
+  [2] null
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PotionModel> Potions:
+  [0] MegaCrit.Sts2.Core.Models.Potions.SpeedPotion
+MegaCrit.Sts2.Core.Entities.Creatures.Creature Osty = null
+System.Boolean IsOstyAlive = False
+System.Boolean IsOstyMissing = True
+System.Int32 Gold = 148
+System.Int32 MaxAscensionWhenRunStarted = 0
+System.Boolean HasOpenPotionSlots = True
+System.Boolean CanRemovePotions = True
+MegaCrit.Sts2.Core.Entities.Cards.CardPile Deck -> MegaCrit.Sts2.Core.Entities.Cards.CardPile
+System.Int32 MaxEnergy = 3
+System.Collections.Generic.List<MegaCrit.Sts2.Core.Models.ModelId> DiscoveredCards:
+  [0] MegaCrit.Sts2.Core.Models.ModelId
+  [1] MegaCrit.Sts2.Core.Models.ModelId
+  [2] MegaCrit.Sts2.Core.Models.ModelId
+  ... preview limited to 3 items
+System.Collections.Generic.List<MegaCrit.Sts2.Core.Models.ModelId> DiscoveredRelics:
+  [0] MegaCrit.Sts2.Core.Models.ModelId
+System.Collections.Generic.List<MegaCrit.Sts2.Core.Models.ModelId> DiscoveredPotions:
+  <empty>
+System.Collections.Generic.List<MegaCrit.Sts2.Core.Models.ModelId> DiscoveredEnemies:
+  [0] MegaCrit.Sts2.Core.Models.ModelId
+System.Collections.Generic.List<System.String> DiscoveredEpochs:
+  <empty>
+System.Int32 BaseOrbSlotCount = 0
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Entities.Cards.CardPile> Piles:
+  [0] MegaCrit.Sts2.Core.Entities.Cards.CardPile
+  [1] MegaCrit.Sts2.Core.Entities.Cards.CardPile
+  [2] MegaCrit.Sts2.Core.Entities.Cards.CardPile
+  ... preview limited to 3 items
+--- PUBLIC INSTANCE METHODS ---
+System.Boolean HasEventPet()
+System.Void InitializeSeed(System.String seed)
+System.Void PopulateRelicGrabBagIfNecessary(MegaCrit.Sts2.Core.Random.Rng rng)
+MegaCrit.Sts2.Core.Saves.Runs.SerializablePlayer ToSerializable()
+System.Void SyncWithSerializedPlayer(MegaCrit.Sts2.Core.Saves.Runs.SerializablePlayer player)
+System.Void AddRelicInternal(MegaCrit.Sts2.Core.Models.RelicModel relic, System.Int32 index, System.Boolean silent)
+System.Void RemoveRelicInternal(MegaCrit.Sts2.Core.Models.RelicModel relic, System.Boolean silent)
+System.Void MeltRelicInternal(MegaCrit.Sts2.Core.Models.RelicModel relic)
+T GetRelic()
+MegaCrit.Sts2.Core.Models.RelicModel GetRelicById(MegaCrit.Sts2.Core.Models.ModelId id)
+System.Int32 GetPotionSlotIndex(MegaCrit.Sts2.Core.Models.PotionModel model)
+MegaCrit.Sts2.Core.Models.PotionModel GetPotionAtSlotIndex(System.Int32 index)
+System.Void AddToMaxPotionCount(System.Int32 maxPotionCountIncrease)
+System.Void SubtractFromMaxPotionCount(System.Int32 maxPotionCountDecrease)
+MegaCrit.Sts2.Core.Entities.Potions.PotionProcureResult AddPotionInternal(MegaCrit.Sts2.Core.Models.PotionModel potion, System.Int32 slotIndex, System.Boolean silent)
+System.Void DiscardPotionInternal(MegaCrit.Sts2.Core.Models.PotionModel potion, System.Boolean silent)
+System.Void RemoveUsedPotionInternal(MegaCrit.Sts2.Core.Models.PotionModel potion)
+System.Void ResetCombatState()
+System.Void PopulateCombatState(MegaCrit.Sts2.Core.Random.Rng rng, MegaCrit.Sts2.Core.Combat.CombatState state)
+System.Threading.Tasks.Task ReviveBeforeCombatEnd()
+System.Void AfterCombatEnd()
+System.Void OnSideSwitch()
+System.Void DeactivateHooks()
+System.Void ActivateHooks()
+
+========== PLAYER CREATURE ==========
+--- player.Creature: MegaCrit.Sts2.Core.Entities.Creatures.Creature ---
+--- PROPERTIES ---
+System.Int32 Block = 0
+System.Int32 CurrentHp = 54
+System.Int32 MaxHp = 70
+System.Nullable<System.Int32> MonsterMaxHpBeforeModification = null
+System.Nullable<System.UInt32> CombatId = 0
+MegaCrit.Sts2.Core.Models.MonsterModel Monster = null
+MegaCrit.Sts2.Core.Entities.Players.Player Player -> MegaCrit.Sts2.Core.Entities.Players.Player
+MegaCrit.Sts2.Core.Models.ModelId ModelId -> MegaCrit.Sts2.Core.Models.ModelId
+MegaCrit.Sts2.Core.Combat.CombatSide Side = Player
+MegaCrit.Sts2.Core.Combat.ICombatState CombatState -> MegaCrit.Sts2.Core.Combat.CombatState
+System.String Name = 静默猎手
+System.String LogName = 静默猎手
+System.Boolean IsMonster = False
+System.Boolean IsPlayer = True
+MegaCrit.Sts2.Core.Entities.Creatures.HpDisplay HpDisplay = Normal
+MegaCrit.Sts2.Core.Entities.Players.Player PetOwner = null
+System.Boolean IsPet = False
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> Pets:
+  <empty>
+System.Boolean IsAlive = True
+System.Boolean IsDead = False
+System.String SlotName = null
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.HoverTips.IHoverTip> HoverTips:
+  [0] MegaCrit.Sts2.Core.HoverTips.HoverTip
+System.Boolean IsEnemy = False
+System.Boolean IsPrimaryEnemy = False
+System.Boolean IsSecondaryEnemy = False
+System.Boolean IsHittable = True
+System.Boolean CanReceivePowers = True
+System.Boolean IsStunned = False
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Models.PowerModel> Powers:
+  [0] MegaCrit.Sts2.Core.Models.Powers.WellLaidPlansPower
+--- PUBLIC INSTANCE METHODS ---
+System.Void SetUniqueMonsterHpValue(System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> creaturesOnSide, MegaCrit.Sts2.Core.Random.Rng rng)
+System.Void ScaleMonsterHpForMultiplayer(MegaCrit.Sts2.Core.Models.EncounterModel encounter, System.Int32 playerCount, System.Int32 actIndex)
+MegaCrit.Sts2.Core.Nodes.Combat.NCreatureVisuals CreateVisuals()
+System.Threading.Tasks.Task AfterAddedToRoom()
+System.Decimal DamageBlockInternal(System.Decimal amount, MegaCrit.Sts2.Core.ValueProps.ValueProp props)
+MegaCrit.Sts2.Core.Entities.Creatures.DamageResult LoseHpInternal(System.Decimal amount, MegaCrit.Sts2.Core.ValueProps.ValueProp props)
+System.Void GainBlockInternal(System.Decimal amount)
+System.Void LoseBlockInternal(System.Decimal amount)
+System.Void HealInternal(System.Decimal amount)
+System.Void SetCurrentHpInternal(System.Decimal amount)
+System.Void SetMaxHpInternal(System.Decimal amount)
+System.Void Reset()
+System.Void InvokeDiedEvent()
+System.Void StunInternal(System.Func<System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature>, System.Threading.Tasks.Task> stunMove, System.String nextMoveId)
+System.Void PrepareForNextTurn(System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Entities.Creatures.Creature> targets, System.Boolean rollNewMove)
+System.Boolean HasPower()
+System.Boolean HasPower(MegaCrit.Sts2.Core.Models.ModelId id)
+T GetPower()
+MegaCrit.Sts2.Core.Models.PowerModel GetPower(MegaCrit.Sts2.Core.Models.ModelId id)
+System.Collections.Generic.IEnumerable<T> GetPowerInstances()
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PowerModel> GetPowerInstances(MegaCrit.Sts2.Core.Models.ModelId id)
+MegaCrit.Sts2.Core.Models.PowerModel GetPowerById(MegaCrit.Sts2.Core.Models.ModelId id)
+System.Int32 GetPowerAmount()
+System.Void ApplyPowerInternal(MegaCrit.Sts2.Core.Models.PowerModel power)
+System.Void InvokePowerModified(MegaCrit.Sts2.Core.Models.PowerModel power, System.Int32 change, System.Boolean silent)
+System.Void RemovePowerInternal(MegaCrit.Sts2.Core.Models.PowerModel power)
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PowerModel> RemoveAllPowersInternalExcept(System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PowerModel> except)
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PowerModel> RemoveAllPowersAfterDeath()
+System.Void BeforeTurnStart(MegaCrit.Sts2.Core.Combat.CombatSide side)
+System.Threading.Tasks.Task AfterTurnStart(MegaCrit.Sts2.Core.Combat.CombatSide side)
+System.Void OnSideSwitch()
+System.Threading.Tasks.Task TakeTurn()
+System.String ToString()
+System.Double GetHpPercentRemaining()
+MegaCrit.Sts2.Core.Nodes.Combat.NCreature GetCreatureNode()
+Godot.Control GetVfxContainer()
+Godot.Control GetBackVfxContainer()
+
+========== PLAYER COMBAT STATE ==========
+--- player.PlayerCombatState: MegaCrit.Sts2.Core.Entities.Players.PlayerCombatState ---
+--- PROPERTIES ---
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> Pets:
+  <empty>
+System.Int32 TurnNumber = 5
+MegaCrit.Sts2.Core.Combat.PlayerTurnPhase Phase = Play
+MegaCrit.Sts2.Core.Entities.Cards.CardPile Hand -> MegaCrit.Sts2.Core.Entities.Cards.CardPile
+MegaCrit.Sts2.Core.Entities.Cards.CardPile DrawPile -> MegaCrit.Sts2.Core.Entities.Cards.CardPile
+MegaCrit.Sts2.Core.Entities.Cards.CardPile DiscardPile -> MegaCrit.Sts2.Core.Entities.Cards.CardPile
+MegaCrit.Sts2.Core.Entities.Cards.CardPile ExhaustPile -> MegaCrit.Sts2.Core.Entities.Cards.CardPile
+MegaCrit.Sts2.Core.Entities.Cards.CardPile PlayPile -> MegaCrit.Sts2.Core.Entities.Cards.CardPile
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Cards.CardPile> AllPiles:
+  [0] MegaCrit.Sts2.Core.Entities.Cards.CardPile
+  [1] MegaCrit.Sts2.Core.Entities.Cards.CardPile
+  [2] MegaCrit.Sts2.Core.Entities.Cards.CardPile
+  ... preview limited to 3 items
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.CardModel> AllCards:
+  [0] MegaCrit.Sts2.Core.Models.Cards.Murder
+  [1] MegaCrit.Sts2.Core.Models.Cards.DefendSilent
+  [2] MegaCrit.Sts2.Core.Models.Cards.StrikeSilent
+  ... preview limited to 3 items
+System.Int32 Energy = 3
+System.Int32 MaxEnergy = 3
+System.Int32 Stars = 0
+MegaCrit.Sts2.Core.Entities.Orbs.OrbQueue OrbQueue -> MegaCrit.Sts2.Core.Entities.Orbs.OrbQueue
+--- PUBLIC INSTANCE METHODS ---
+System.Void AfterCombatEnd()
+System.Void IncrementTurnNumber()
+System.Void ResetEnergy()
+System.Void AddMaxEnergyToCurrent()
+System.Void LoseEnergy(System.Decimal amount)
+System.Void GainEnergy(System.Decimal amount)
+System.Boolean HasEnoughResourcesFor(MegaCrit.Sts2.Core.Models.CardModel card, MegaCrit.Sts2.Core.Entities.Cards.UnplayableReason& reason)
+System.Void LoseStars(System.Decimal amount)
+System.Void GainStars(System.Decimal amount)
+System.Void AddPetInternal(MegaCrit.Sts2.Core.Entities.Creatures.Creature pet)
+MegaCrit.Sts2.Core.Entities.Creatures.Creature GetPet()
+System.Void RecalculateCardValues()
+System.Void EndOfTurnCleanup()
+System.Boolean HasCardsToPlay()
+
+========== ENEMY 0 ==========
+--- enemy[0]: MegaCrit.Sts2.Core.Entities.Creatures.Creature ---
+--- PROPERTIES ---
+System.Int32 Block = 0
+System.Int32 CurrentHp = 25
+System.Int32 MaxHp = 61
+System.Nullable<System.Int32> MonsterMaxHpBeforeModification = 61
+System.Nullable<System.UInt32> CombatId = 1
+MegaCrit.Sts2.Core.Models.MonsterModel Monster -> MegaCrit.Sts2.Core.Models.Monsters.VineShambler
+MegaCrit.Sts2.Core.Entities.Players.Player Player = null
+MegaCrit.Sts2.Core.Models.ModelId ModelId -> MegaCrit.Sts2.Core.Models.ModelId
+MegaCrit.Sts2.Core.Combat.CombatSide Side = Enemy
+MegaCrit.Sts2.Core.Combat.ICombatState CombatState -> MegaCrit.Sts2.Core.Combat.CombatState
+System.String Name = 藤蔓蹒跚者
+System.String LogName = 藤蔓蹒跚者
+System.Boolean IsMonster = True
+System.Boolean IsPlayer = False
+MegaCrit.Sts2.Core.Entities.Creatures.HpDisplay HpDisplay = Normal
+MegaCrit.Sts2.Core.Entities.Players.Player PetOwner = null
+System.Boolean IsPet = False
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> Pets:
+  <empty>
+System.Boolean IsAlive = True
+System.Boolean IsDead = False
+System.String SlotName = null
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.HoverTips.IHoverTip> HoverTips:
+  [0] MegaCrit.Sts2.Core.HoverTips.HoverTip
+  [1] MegaCrit.Sts2.Core.HoverTips.HoverTip
+System.Boolean IsEnemy = True
+System.Boolean IsPrimaryEnemy = True
+System.Boolean IsSecondaryEnemy = False
+System.Boolean IsHittable = True
+System.Boolean CanReceivePowers = True
+System.Boolean IsStunned = False
+System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Models.PowerModel> Powers:
+  <empty>
+--- PUBLIC INSTANCE METHODS ---
+System.Void SetUniqueMonsterHpValue(System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature> creaturesOnSide, MegaCrit.Sts2.Core.Random.Rng rng)
+System.Void ScaleMonsterHpForMultiplayer(MegaCrit.Sts2.Core.Models.EncounterModel encounter, System.Int32 playerCount, System.Int32 actIndex)
+MegaCrit.Sts2.Core.Nodes.Combat.NCreatureVisuals CreateVisuals()
+System.Threading.Tasks.Task AfterAddedToRoom()
+System.Decimal DamageBlockInternal(System.Decimal amount, MegaCrit.Sts2.Core.ValueProps.ValueProp props)
+MegaCrit.Sts2.Core.Entities.Creatures.DamageResult LoseHpInternal(System.Decimal amount, MegaCrit.Sts2.Core.ValueProps.ValueProp props)
+System.Void GainBlockInternal(System.Decimal amount)
+System.Void LoseBlockInternal(System.Decimal amount)
+System.Void HealInternal(System.Decimal amount)
+System.Void SetCurrentHpInternal(System.Decimal amount)
+System.Void SetMaxHpInternal(System.Decimal amount)
+System.Void Reset()
+System.Void InvokeDiedEvent()
+System.Void StunInternal(System.Func<System.Collections.Generic.IReadOnlyList<MegaCrit.Sts2.Core.Entities.Creatures.Creature>, System.Threading.Tasks.Task> stunMove, System.String nextMoveId)
+System.Void PrepareForNextTurn(System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Entities.Creatures.Creature> targets, System.Boolean rollNewMove)
+System.Boolean HasPower()
+System.Boolean HasPower(MegaCrit.Sts2.Core.Models.ModelId id)
+T GetPower()
+MegaCrit.Sts2.Core.Models.PowerModel GetPower(MegaCrit.Sts2.Core.Models.ModelId id)
+System.Collections.Generic.IEnumerable<T> GetPowerInstances()
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PowerModel> GetPowerInstances(MegaCrit.Sts2.Core.Models.ModelId id)
+MegaCrit.Sts2.Core.Models.PowerModel GetPowerById(MegaCrit.Sts2.Core.Models.ModelId id)
+System.Int32 GetPowerAmount()
+System.Void ApplyPowerInternal(MegaCrit.Sts2.Core.Models.PowerModel power)
+System.Void InvokePowerModified(MegaCrit.Sts2.Core.Models.PowerModel power, System.Int32 change, System.Boolean silent)
+System.Void RemovePowerInternal(MegaCrit.Sts2.Core.Models.PowerModel power)
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PowerModel> RemoveAllPowersInternalExcept(System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PowerModel> except)
+System.Collections.Generic.IEnumerable<MegaCrit.Sts2.Core.Models.PowerModel> RemoveAllPowersAfterDeath()
+System.Void BeforeTurnStart(MegaCrit.Sts2.Core.Combat.CombatSide side)
+System.Threading.Tasks.Task AfterTurnStart(MegaCrit.Sts2.Core.Combat.CombatSide side)
+System.Void OnSideSwitch()
+System.Threading.Tasks.Task TakeTurn()
+System.String ToString()
+System.Double GetHpPercentRemaining()
+MegaCrit.Sts2.Core.Nodes.Combat.NCreature GetCreatureNode()
+Godot.Control GetVfxContainer()
+Godot.Control GetBackVfxContainer()
+

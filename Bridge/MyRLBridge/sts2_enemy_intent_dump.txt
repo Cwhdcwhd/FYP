@@ -1,0 +1,33 @@
+========== ENEMY NEXT MOVE DIAGNOSTIC ==========
+Captured: 2026-11-12T16:57:56.3253307+08:00
+Round: 1
+
+Enemy: Bygone Effigy
+CombatId: 1
+Monster type: MegaCrit.Sts2.Core.Models.Monsters.BygoneEffigy
+IntendsToAttack: False
+--- NextMove: MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine.MoveState ---
+--- PUBLIC PROPERTIES ---
+System.Collections.Generic.IReadOnlyList`1[[MegaCrit.Sts2.Core.MonsterMoves.Intents.AbstractIntent, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] Intents = MegaCrit.Sts2.Core.MonsterMoves.Intents.AbstractIntent[]
+  Runtime type: MegaCrit.Sts2.Core.MonsterMoves.Intents.AbstractIntent[]
+System.String StateId = SLEEP_MOVE
+  Runtime type: System.String
+System.Boolean MustPerformOnceBeforeTransitioning = False
+  Runtime type: System.Boolean
+System.String FollowUpStateId = <null>
+MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine.MonsterState FollowUpState = MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine.MoveState
+  Runtime type: MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine.MoveState
+System.Boolean CanTransitionAway = True
+  Runtime type: System.Boolean
+System.Boolean IsMove = True
+  Runtime type: System.Boolean
+System.String Id = SLEEP_MOVE
+  Runtime type: System.String
+System.Boolean ShouldAppearInLogs = True
+  Runtime type: System.Boolean
+--- PUBLIC METHODS ---
+System.Threading.Tasks.Task PerformMove(System.Collections.Generic.IEnumerable`1[[MegaCrit.Sts2.Core.Entities.Creatures.Creature, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] targets)
+System.Void OnExitState()
+System.String GetNextState(MegaCrit.Sts2.Core.Entities.Creatures.Creature owner, MegaCrit.Sts2.Core.Random.Rng rng)
+System.Void RegisterStates(System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine.MonsterState, sts2, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null]] monsterStates)
+System.Void OnEnterState()
